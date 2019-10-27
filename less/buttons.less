@@ -4,15 +4,25 @@
     }
 
     &-close {
-        .button(@waterloo, #cccccc);
+        .button(rgba(0,0,0,0.8), #cccccc);
         width: 40px;
         height: 40px;
         font-size: 36px;
         opacity: 1;
         position: absolute;
         top: 18px;
-        padding: 1px;
         right: 30px;
+        padding: 1px;
         border-radius: 50%;
+        @media @phone {
+            width: 40px;
+            height: 40px;
+        }
     }
+
+    &-close:hover {
+        background-color: @waterloo;
+    }
+
+    
 }

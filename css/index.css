@@ -195,7 +195,7 @@ button {
   }
 }
 .btn-close {
-  background-color: #81848E;
+  background-color: rgba(0, 0, 0, 0.8);
   color: #cccccc;
   padding: 10px 20px;
   text-align: center;
@@ -210,18 +210,27 @@ button {
   opacity: 1;
   position: absolute;
   top: 18px;
-  padding: 1px;
   right: 30px;
+  padding: 1px;
   border-radius: 50%;
 }
 .btn-close:hover {
-  background-color: #686b74;
+  background-color: rgba(0, 0, 0, 0.8);
   color: #e6e6e6;
 }
 @media screen and (max-width: 500px) {
   .btn-close {
     width: 100%;
   }
+}
+@media screen and (max-width: 500px) {
+  .btn-close {
+    width: 40px;
+    height: 40px;
+  }
+}
+.btn-close:hover {
+  background-color: #81848E;
 }
 form {
   margin: 2rem 0;
@@ -431,6 +440,48 @@ footer {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  animation: bounce-in 2s;
+  -webkit-animation: bounce-in 2s;
+  -moz-animation: bounce-in 2s;
+}
+@-moz-keyframes bounce-in {
+  0% {
+    transform: scale(0.1);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@-webkit-keyframes bounce-in {
+  0% {
+    transform: scale(0.1);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes bounce-in {
+  0% {
+    transform: scale(0.1);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 .home .subscription-form .filter {
   position: absolute;
@@ -447,6 +498,13 @@ footer {
   padding: 2.5rem;
   width: 50%;
   z-index: 5;
+}
+@media screen and (max-width: 500px) {
+  .home .subscription-form form {
+    width: 98%;
+    height: 80%;
+    padding-top: 40%;
+  }
 }
 .home .subscription-form form button[type=submit] {
   margin-top: 20px;

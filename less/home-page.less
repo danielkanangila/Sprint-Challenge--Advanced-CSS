@@ -127,6 +127,7 @@
     height: 100%;
     background: transparent;
     .flex-layout(column, center, center);
+    .animation.bounce-in();
 
     .filter {
       position: absolute;
@@ -144,6 +145,12 @@
       padding: 2.5rem;
       width: 50%;
       z-index: 5;
+
+      @media @phone {
+        width: 98%;
+        height: 80%;
+        padding-top: 40%;
+      }
 
       button[type=submit] {
         margin-top: 20px;
