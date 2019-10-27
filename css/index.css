@@ -220,6 +220,59 @@ button {
     width: 100%;
   }
 }
+form {
+  margin: 2rem 0;
+}
+.field {
+  display: flex;
+  flex-flow: column-reverse;
+  margin-bottom: 1rem;
+}
+label,
+input {
+  transition: all 0.2s;
+  touch-action: manipulation;
+}
+input {
+  font-size: 1.5rem;
+  border: 0;
+  border-bottom: 1px solid #ccc;
+  font-family: inherit;
+  appearance: none;
+  border-radius: 0;
+  padding: 5px 5px 5px 0px;
+  cursor: text;
+  /** Overide the placeholder by the label  **/
+}
+input:focus {
+  outline: 0;
+  border-bottom: 1px solid #0f44e0;
+}
+input:placeholder-shown + label {
+  cursor: text;
+  max-width: 66.66%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transform-origin: left bottom;
+  transform: translate(0, 2.125rem) scale(1.5);
+}
+input:focus::-webkit-input-placeholder {
+  opacity: 1;
+}
+input:not(:placeholder-shown) + label,
+input:focus + label {
+  transform: translate(0, 0) scale(1);
+  cursor: pointer;
+  color: #0f44e0;
+}
+label {
+  text-transform: uppercase;
+  letter-spacing: 0.05rem;
+}
+::-webkit-input-placeholder {
+  opacity: 0;
+  transition: inherit;
+}
 .navbar {
   display: flex;
   flex-direction: column;
