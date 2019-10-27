@@ -55,7 +55,7 @@
             <p>Which there is no center because every point, or none, is center — an equal earth which all men occupy as equals. The airman's earth, if free men make it.</p>
         </section>
 
-        <section class="walk">
+        <section id="walk" class="walk">
             <div class="walk-text">
                 <h3>Let's Go For A Walk</h3>
 
@@ -63,7 +63,7 @@
 
                 <p>Suddenly struck me that that tiny pea, pretty and blue, was the Earth. I put up my thumb and shut one eye, and my thumb blotted out the planet Earth.</p>
 
-                <button class="btn-primary">
+                <button onclick="openForm()" class="btn-primary">
                     Sign Up
                 </button>
             </div>
@@ -73,11 +73,12 @@
             </div>
 
         </section>
-        <div class="subscription-form">
+        <div id="subscriptionForm" class="display-none">
             <div class="filter">
                 <button onclick="closeForm()" class="btn-close">&times;</button>
             </div>
             <form action="#">
+                <h2>Subscribe</h2>
                 <div class="field">
                     <input type="text" name="fullname" id="fullname" placeholder="Dan Joe" required>
                     <label for="fullname">Name</label>
@@ -103,6 +104,7 @@
         </footer>
 
     </div>
+    <script src="js/main.js"></script>
 </body>
 
 </html>
