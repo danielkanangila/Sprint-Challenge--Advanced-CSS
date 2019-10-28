@@ -1,1 +1,41 @@
 // Mixins Here
+.flex-layout(@direction, @justify, @align) {
+    display: flex;
+    flex-direction: @direction;
+    justify-content: @justify;
+    align-items: @align;
+}
+
+.button(@bg-color, @color) {
+    background-color: @bg-color;
+    color: @color;
+    padding: 10px 20px;
+    text-align: center;
+    border-radius: 5px;
+    width: 120px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    transition: .3s;
+
+    &:hover {
+        background-color: darken(@bg-color, 10%);
+        color: lighten(@color, 10%);
+    }
+
+    @media @phone {
+        width: 100%;
+    }
+}
+
+// animations
+.keyframes(@name, @arguments) {
+    @-moz-keyframes @name { @arguments(); }
+    @-webkit-keyframes @name { @arguments(); }
+    @keyframes @name { @arguments(); }
+}
+
+.animations(@arguments) {
+    animation: @arguments;
+    -webkit-animation: @arguments;
+    -moz-animation: @arguments;
+}

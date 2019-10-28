@@ -1,1 +1,25 @@
 // Navigation code here
+.navbar {
+    .flex-layout(column, center, center);
+    width: 100%;
+    background-color: @nav-bg;
+    padding: 15px;
+     
+    .brand {
+        font-family: 'Russo One', sans-serif;
+        font-size: 3rem;
+        color: @header-font-color;
+    }
+
+    ul {
+        .flex-layout(row, center, center);
+        margin-top: 15px;
+        li a {
+            padding: 0 15px;
+
+            @media @phone {
+                padding: 7px;
+            }
+        }
+    }
+}
